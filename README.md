@@ -1,7 +1,6 @@
-#WebsiteHome
-个人网站工程
+#IForceJS
 
->[查看网站](http://kune.online)
+>[VIEW](http://kune.online)
 
 ----------
   **Git版本管理须知** 

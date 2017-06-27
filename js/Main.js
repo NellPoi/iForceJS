@@ -144,36 +144,4 @@ function test1_Modal5_btn_NextSteps(){
 	if (ModalFooterMode=false){
 		FonterOtherMode();
 	}
-}try{
-	var Date_zk6=23;
-	var MyDate=new Date;
-	var MyDate_NowDate=MyDate.getDate();
-	var ChangeNTN_M1=function() {
-		if (MyDate_NowDate > 26)
-		{
-
-			document.getElementById("NavTestName").innerHTML = 31 - MyDate_NowDate + 1 + Date_zk6 + "天";
-		};};
-	var ChangeNTN_M2=function() {
-		if (MyDate_NowDate < 23)
-		{
-
-			document.getElementById("NavTestName").innerHTML = Date_zk6 - MyDate_NowDate +"天";
-		};};
-		var ChangeNTN_M3=function() {/*
-			if(MyDate_NowDate=Date_zk6){
-				document.getElementById("NavTestName").innerHTML ="今日";
-			}
-			if(MyDate_NowDate=Date_zk6+1){
-				document.getElementById("NavTestName").innerHTML ="第二天.";
-			}
-			if(MyDate_NowDate=Date_zk6+2){
-				document.getElementById("NavTestName").innerHTML ="最后一天.";
-			}
-			if(MyDate_NowDate=Date_zk6+3){
-				document.getElementById("navtestspan").innerHTML="毕业.";
-				document.getElementById("NavTestName").innerHTML ="<None>";
-			}*/
-		};
 }
-catch(e){alert("ERROR\n" + e);} 

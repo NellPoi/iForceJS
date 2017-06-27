@@ -1,4 +1,4 @@
-#IForceJS
+#iForceJS
 
 >[VIEW](http://kune.online)
 

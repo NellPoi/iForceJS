@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Kun-Fit</title>
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- JS -->
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/Main.js"></script>
+  <script src="js/res/strings.js"></script>
+  <script src="js/res/ResUrlsManager.js"></script>
+  <script src="js/CodeCheck.js"></script>
+  <!--Chrome-->
+  <meta name="theme-color" content="#0288d1">
+  <!--MOBILE顶栏-->
+  <nav class="nav-extended light-blue darken-2">
+    <div class="nav-wrapper">
+	  <div class="z-depth-2">
+		<a href="#" class="white-text" id="nav_title" style="font-size:x-large;padding:0;margin:0;font-weight:500;">iForceJS</a>
+		<a href="#" data-activates="slide-out" class="button-collapse tooltipped" data-position="bottom" delay="50" data-tooltip="这里是网页框架的bug\n点击按钮打开侧边栏关闭时会出现灰色半透明层无法滑动或侧边栏鬼畜闪现\n这肯定不是我的问题！\n解决方法:关闭侧边栏时尝试点击屏幕任意位置.">
+		  <i class="material-icons grey-text text-lighten-2">menu</i>
+		  </a>
+		<img id="Res_NavAboutmeHeadImg" class="circle right dropdown-button" style="width:2.5em;margin:0.8em;" data-activates='dropdown2'>
+		<!--PC顶栏链接-->
+		<ul class="right hide-on-med-and-down">
+		  <li><a href="#" class="white-text">By AarchX</a></li>
+      </ul>
+	  <br/><!--<br>为nav_testname腾出空间-->
+	</div>
+	  <!--MOBILE侧边栏-->
+	  <ul id="slide-out" class="side-nav">
+		<li><div class="userView">
+			<div class="background blue"></div>
+			<a href="#!user" class="tooltipped" data-position="bottom" delay="300" data-tooltip="(｡>∀<｡)"><img class="circle hoverable" id="Res_SidenavHeadImg"></a>
+			<a href="#!name"><span class="white-text name">AarchX</span></a>
+			<a href="#!email"><span class="white-text email">creamtea47@gmail.com</span></a>
+		  </div></li>
+		<li><div class="row z-depth-1">
+			<a class="col s6 center hoverable waves-effect" onclick="location.reload();"><i class="material-icons">replay</i></a>
+			<a class="col s6 center hoverable waves-effect" onclick="$('.button-collapse').sideNav('hide');"><i class="material-icons">tab_unselected</i></a>
+		</div>
+		</li>
+		<li><a class="subheader">子标题</a></li>
+		<li><a class="waves-effect dropdown-button" data-activates='dropdown1' href="#">知乎蓝~</a></li>
+	  </ul>
+    </div>
+	<!--Nav_test部分-->
+	  <div class="light-blue darken-1" style="padding:1.2em;">
+		<h5><span id="navtestspan">中考</span><span id="NavTestName">nav_testname</span></h5>
+		</div>
+      <ul class="tabs light-blue darken-1">
+        <li class="tab hoverable"><a class="white-text active" href="#test1">Active</a></li>
+        <li class="tab hoverable"><a class="white-text" href="#test2">开发者选项</a></li>
+        <li class="tab hoverable"><a class="white-text" href="#test3">CodeCheck</a></li>
+        <li class="tab hoverable"><a class="white-text" href="#test4"></a></li>
+      </ul>
+  </nav> 
+  
+</head>
+  <body id="body">
+  <div class="container">
+	<div class="row right" id="Loading_DisplayRound">
+	<div class="preloader-wrapper small active">
+	  <div class="spinner-layer spinner-red-only">
+		<div class="circle-clipper left">
+		  <div class="circle"></div>
+		</div><div class="gap-patch">
+		  <div class="circle"></div>
+		</div><div class="circle-clipper right">
+		  <div class="circle"></div>
+		</div>
+	  </div>
+	</div><br/>
+	  <span class="blue-text">转啊转啊</span>
+	</div>
+	<!--test1-->
+	<div class="row">
+	  <div id="test1" class="col s12">
+		<p class="blue-text" id="fw_n">Basic</p>
+		<p class="waves-effect" onclick="test1_DisplayDate()">DisplayDate</p>
+		<div class="divider"></div>
+		<p class="waves-effect" onclick="test1_Document()">Document_write</p>
+		<div class="divider"></div>
+		<p class="waves-effect" data-target="modal1">ChangeTitle</p>
+		<div class="divider"></div>
+		<p class="waves-effect" data-target="modal2">CheckNaN</p>
+		<div class="divider"></div>
+		<p class="waves-effect" data-target="modal5">ChangeBackground</p>
+		
+		<p class="blue-text" id="fw_n">数组与对象</p>
+		<p class="waves-effect" data-target="modal3">EchoArray</p>
+		<div class="divider"></div>
+		<p class="waves-effect" data-target="modal4">EchoObject</p>
+	</div>
+  </div>
+  <!--test2-->
+    <div id="test2" class="row">
+	  <div class="col s12">
+	  <p class="blue-text" id="fw_n">绘图</p>
+	  </div>
+	  <div class="waves-effect col s12 hoverable">
+		<p class="col s10" id="t2_tb_f">显示布局边界</p>
+	    <div class="switch col s2" id="test2_CheckBox">
+		  <label>
+		  <input type="checkbox" onclick="test2_ShowLayout()" id="test2_cb_ShowLayout">
+			<span class="lever"></span>
+		  </label>
+	    </div>
+		<a id="string_ShowLayout" class="col s12"></a>
+	  </div>
+	  <div class="divider col s12"></div>
+	  <div class="waves-effect hoverable col s12">
+		<p class="col s10" id="t2_tb_f">强制 RTL 布局</p>
+	    <div class="switch col s2" id="test2_CheckBox">
+		  <label>
+			<input type="checkbox" onclick="test2_ForceRTL()">
+			<span class="lever"></span>
+		  </label>
+	    </div>
+		<a id="string_ForceRTL" class="col s12"></a>
+	  </div>
+	  <div class="divider col s12"></div>
+    </div>
+  <div id="test3">
+	<div class="row">
+	  <h5 class="col s12"><span>Kune-CodeCheck</span></h5><br>
+	  <h6>D<span>ashboard</span></h6>
+	  <div class="col s5 m3 card-panel">
+		<div class="right" style="margin-top:50%">
+		<a class="btn-floating z-depth-0 white"><i class="material-icons grey-text large">settings</i></a>
+		</div>
+		<p>jQuery</p>
+		<span>Version:</span><span>None</span>
+	  </div>
+	</div>
+  </div>
+  
+  <div id="test4" class="col s12"></div>
+  
+  <!-- Dropdown1 Structure -->
+	<ul id='dropdown1' class='dropdown-content'>
+	  <li><a href="#!">没有什么意义.</a></li>
+	  <li><a href="#!">只想打好基础.</a></li>
+	  <li class="divider"></li>
+	  <li><a id="Res_SideNavAudioContext">AudioContext</a></li>
+	</ul>
+	<!-- Dropdown2 Structure -->
+	<ul id='dropdown2' class='dropdown-content blue'>
+	  <li><a href="#modal6" class="white-text">Concert</a></li>
+	  <div class="divider"></div>
+	  <li class="divider"></li>
+	  <li><a id="Res_DropdownQQGroup" class="white-text">咸鱼群</a></li>
+	</ul>
+  
+  <!-- Modal1 Structure -->
+	<div id="modal1" class="modal modal-fixed-footer">
+	  <div class="modal-content">
+		<h5>Edittext</h5>
+		<p>在下面输入文本</p>
+		<div class="row">
+		  <div class="input-field col s10 hoverable">
+		    <label class="active" for="test1_Modal1ipt_TitleValue" id="fw_n" >Title</label>
+		    <input value="iForceJS" id="test1_Modal1ipt_TitleValue" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="支持Html代码">
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal-footer z-depth-2">
+		<b href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue-text" onclick="test1_Modal1btn_ChangeTitle()">OK</b>
+	  </div>
+	</div>
+	<!-- Modal2 Structure -->
+	<div id="modal2" class="modal modal-fixed-footer">
+	  <div class="modal-content">
+		<h5>CheckNaN</h5>
+		<p>检测内容是否为数字(支持检测空格)</p>
+		<div class="row">
+		  <div class="input-field col s10 hoverable">
+		    <label class="active" for="test1_Modal2ipt_CheckNaN" id="fw_n" >TextInput</label>
+		    <input value="233" id="test1_Modal2ipt_CheckNaN" type="text" class="validate">
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal-footer z-depth-2">
+		<b href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue-text" onclick="test1_Modal2btn_CheckNaN()">Check</b>
+	  </div>
+	</div>
+  </div>
+	<!-- Modal3 Structure -->
+	<div id="modal3" class="modal blue white-text">
+	  <div class="modal-content">
+		<h4>Console</h4>
+		<p id="test1_Modal3Text_EchoArray"></p>
+		<div class="fixed-action-btn click-to-toggle"><!--horizontal-->
+		  <a class="btn-floating btn-large white">
+			<i class="material-icons black-text waves-effect waves-teal">code</i>
+		  </a>
+		  <ul>
+			<li><a class="btn-floating blue-grey waves-effect" onclick="test1_Modal3Fbtn_Reload()"><i class="material-icons">tab_unselected</i></a></li>
+			<li><a class="btn-floating blue-grey waves-effect" onclick="test1_Modal3Fbtn_EchoArray()"><i class="material-icons">open_in_browser</i></a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div class="modal-footer blue lighten-1 white-text">
+		<a href="#!" class="left modal-action modal-close waves-effect btn-flat" id="fw_n">Close</a>
+	  </div>
+	</div>
+	<!-- Modal4 Structure -->
+	<div id="modal4" class="modal blue white-text">
+	  <div class="modal-content">
+		<h4>Console</h4>
+		<p id="test1_Modal4Text_EchoObject"></p>
+	  </div>
+	  <div class="fixed-action-btn toolbar">
+		<a class="btn-floating btn-large pink lighten-3">
+		  <i class="material-icons">http</i>
+		</a>
+		<ul>
+		  <li class="waves-effect waves-teal blue"><a onclick="test1_Modal4_Fbtn_EchoObject()"><i class="material-icons">insert_chart</i></a></li>
+		  <li class="waves-effect waves-green blue"><a onclick="alert('坑x2')"><i class="material-icons">format_quote</i></a></li>
+		  <li class="waves-effect waves-yellow blue"><a onclick="test1_Modal4_Fbtn_Refresh()"><i class="material-icons">loop</i></a></li>
+		  <li class="waves-effect waves-purple blue"><a onclick="test1_Modal4_Fbtn_CloseModal()"><i class="material-icons">tab_unselected</i></a></li>
+		</ul>
+	  </div>
+	</div>
+	<!-- Modal5 Structure -->
+	<div id="modal5" class="modal white-text pink lighten-3">
+	  <div class="modal-content">
+		<!--<h4>Console</h4>-->
+		<div class="row">
+		  <div class="col s12">
+			<ul class="tabs">
+			  <li class="tab col s4 pink lighten-3" id="test1_Modal5_test1_ClassName"><a class="white-text" href="#test1_Modal5_test1"><i class="material-icons">dashboard</i></a></li>
+			  <li class="tab col s4 pink lighten-3" id="test1_Modal5_test2_ClassName"><a class="white-text active" href="#test1_Modal5_test2"><i class="material-icons">library_books</i></a></li>
+			  <li class="tab col s4 pink lighten-3" id="test1_Modal5_test3_ClassName"><a class="white-text" href="#test1_Modal5_test3"><i class="material-icons">perm_media</i></a></li>
+			</ul>
+		  </div>
+		  <div id="test1_Modal5_test1" class="col s12">
+			<a class="white-text">选择颜色:</a><br>
+			<input type="color" id="myColor">
+		  </div>
+		  <div id="test1_Modal5_test2" class="col s12">
+			<h6 id="string_ChangeModeTip"></h6>
+			<div class="col s6 center">
+			  <a class="btn-floating btn-large waves-effect white" onclick="test1_Modal5_Fbtn_Mode1()">
+				<i class="material-icons pink-text text-lighten-3 tooltipped" data-position="top" data-delay="50" data-tooltip="[]~(￣▽￣)~*选好颜色模式啦">dashboard</i>
+			  </a>
+			</div>
+			<div class="col s6 center">
+			  <a class="btn-floating btn-large waves-effect white" onclick="test1_Modal5_Fbtn_Mode2()">
+				<i class="material-icons pink-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="(*・ω・)ノ已经是图片模式了呢">perm_media</i>
+			  </a>
+			</div>
+		  </div>
+		  <div id="test1_Modal5_test3" class="col s12">
+			<a class="white-text">选择图片:</a>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal-footer pink lighten-3"><b class="btn-flat white-text left" onclick="test1_Modal5_btn_NextSteps()" id="test1_Modal5_FooterMode">Next</b></div>
+	</div>
+	<!-- Modal6 Structure -->
+	<div id="modal6" class="modal">
+	  <div class="modal-content blue">
+		<i class="material-icons white-text medium right">email</i>
+		<span class="white-text">客官不留下个足迹嘛 字数不限~<br></span>
+		<span class="white-text">有问题或者建议都可以向我吐槽哦(´///ω/// `)
+		  放心~除了你写的内容之外和你有关的访问信息不会被记录</span><br><br>
+		<span class="white-text">所写的内容会被保存到服务器中，所以我<del>可能</del>肯定看得见你的留言.</span>
+		<iframe src="FeedBack.html" frameborder="0" width="100%"></iframe>
+	  </div>
+	</div>
+	
+  <!--框架核心组件，不可调换加载顺序-->
+	<script>
+	  /*CodeCheck DEMO*/
+	  window.onload=function(){
+	  try{api_CodeCheck_Load();}catch(e){alert("API_1_ERROR\n"+e);};
+	  try{api_ResUrlsManager_Load();}catch(e){alert("API_2_ERROR\n"+e);};
+	  try{api_string_Load();}catch(e){alert("API_3_ERROR\n"+e);};
+	  };
+	  ChangeNTN_M1();
+	  ChangeNTN_M2();
+	  ChangeNTN_M3();
+	</script>
+  <script src="js/init.js"></script>
+  <script src="js/materialize.js"></script>
+</body>
+<html>

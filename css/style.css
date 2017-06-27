@@ -1,0 +1,105 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+/*全局细体*/
+*{
+  font-weight: 100;
+  /*动态渲染页面布局*/
+  /*
+  border:1px red solid;
+  */
+}
+/*局部默认字体，<b>标签上使用会适得其反.*/
+#fw_n{
+  font-weight:normal;
+}
+/*局部0内外边距*/
+#t2_tb_f{
+  padding-top:0.7em;
+  padding-bottom:0;
+  padding-left:0;
+  padding-right:0;
+  margin:0;
+  font-size:17px;
+}
+/*强行兼容CheckBox*/
+#test2_CheckBox{
+  padding:0;
+  position:relative;
+  top:1.7em;
+}
+#body{/*
+  background-image: url(啥玩意啊);*/
+  background-repeat:no-repeat;
+}
+/*继承strings样式*/
+#string_ShowLayout{
+  color:#A3A3A3;
+  padding:0;
+  font-size:13px.
+  position:relative;
+  top:-1.5em;
+  margin-bottom:0.7em;
+}
+#string_ForceRTL{
+  color:#A3A3A3;
+  padding:0;
+  font-size:13px.
+  position:relative;
+  top:-1.5em;
+  margin-bottom:0.7em;
+}

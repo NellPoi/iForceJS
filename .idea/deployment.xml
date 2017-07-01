@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="XAMPP">
+    <serverData>
+      <paths name="AutoUpload">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/iForceJS" local="$PROJECT_DIR$" web="/iForceJS" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="XAMPP">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/iForceJS" local="$PROJECT_DIR$" web="/iForceJS" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="68374dcb-738e-4837-b8d2-b037c41d2f20" name="XAMPP" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="H:\Programs\XAMPP\htdocs" accessType="MOUNT" />
+      </webServer>
+      <webServer id="1a36091b-3df4-4350-a082-f00c4e047a9a" name="AutoUpload" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

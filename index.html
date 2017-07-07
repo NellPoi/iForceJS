@@ -51,7 +51,7 @@
 		</div>
 		<!--Nav_test部分-->
 		<div class="light-blue darken-1" style="padding:1.2em;">
-			<h5><span>Nav-TestName</span></h5>
+			<h5><span id="Navtestname">NavTestName</span></h5>
 		</div>
 		<ul class="tabs light-blue darken-1">
 			<li class="tab hoverable"><a class="white-text" href="#test1">Active</a></li>
@@ -128,17 +128,7 @@
 	</div>
 	<!--test3-->
 	<div id="test3">
-		<div class="row">
-			<h5 class="col s12"><span>Kune-CodeCheck</span></h5><br>
-			<h6>D<span>ashboard</span></h6>
-			<div class="col s5 m3 card-panel">
-				<div class="right" style="margin-top:50%">
-					<a class="btn-floating z-depth-0 white"><i class="material-icons grey-text large">settings</i></a>
-				</div>
-				<p>jQuery</p>
-				<span>Version:</span><span>None</span>
-			</div>
-		</div>
+
 	</div>
 	<!--test4-->
 	<div id="test4" class="col s12">
@@ -280,6 +270,19 @@
 	</div>
 
 <!--框架核心组件，不可调换加载顺序-->
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA4ZeFOhXK7la3_UvaXvyGW27j7LnYMlQ4",
+        authDomain: "kune-33ae0.firebaseapp.com",
+        databaseURL: "https://kune-33ae0.firebaseio.com",
+        projectId: "kune-33ae0",
+        storageBucket: "kune-33ae0.appspot.com",
+        messagingSenderId: "302939930437"
+    };
+    firebase.initializeApp(config);
+</script>
 <script>
 	/*CodeCheck DEMO*/
     window.onload=function(){

@@ -1,4 +1,4 @@
-var api_CodeCheck_CodeIinfo={
+var api_CodeCheck_CodeInfo={
 	Status:true,
 };
 var api_CodeCheck_Load=function(){

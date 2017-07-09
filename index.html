@@ -22,7 +22,7 @@
 		<div class="nav-wrapper">
 			<div class="z-depth-2">
 				<a href="#" class="white-text" id="nav_title" style="font-size:x-large;padding:0;margin:0;font-weight:500;">iForceJS</a>
-				<a href="#" data-activates="slide-out" class="button-collapse tooltipped" data-position="bottom" delay="50" data-tooltip="这里是网页框架的bug\n点击按钮打开侧边栏关闭时会出现灰色半透明层无法滑动或侧边栏鬼畜闪现\n这肯定不是我的问题！\n解决方法:关闭侧边栏时尝试点击屏幕任意位置.">
+				<a href="#" data-activates="slide-out" class="button-collapse">
 					<i class="material-icons grey-text text-lighten-2">menu</i>
 				</a>
 				<img id="Res_NavAboutmeHeadImg" class="circle right dropdown-button" style="width:2.5em;margin:0.8em;" data-activates='dropdown2'>
@@ -56,12 +56,13 @@
 		<ul class="tabs light-blue darken-1">
 			<li class="tab hoverable"><a class="white-text" href="#test1">Active</a></li>
 			<li class="tab hoverable"><a class="white-text" href="#test2">开发者选项</a></li>
-			<li class="tab hoverable"><a class="white-text" href="#test3">CodeCheck</a></li>
-			<li class="tab hoverable"><a class="white-text  active" href="#test4">Lab</a></li>
+			<li class="tab hoverable"><a class="white-text active" href="#test3">CodeCheck</a></li>
+			<li class="tab hoverable"><a class="white-text" href="#test4">Lab</a></li>
 		</ul>
 	</nav>
 
 </head>
+
 <body id="body">
 <div class="container">
 	<div class="row right" id="Loading_DisplayRound">
@@ -128,7 +129,25 @@
 	</div>
 	<!--test3-->
 	<div id="test3">
+		<div class="row">
+			<h4><span>Structure</span></h4>
 
+			<div class="card col s7 offset-l1">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" id="Res_DemoBGImg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">卡片标题<i class="material-icons right">more_vert</i></span>
+					<p><a href="#">这是一个链接</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">卡片标题<i class="material-icons right">close</i></span>
+					<p>单击后显示的产品的详细信息。</p>
+				</div>
+			</div>
+
+		</div>
+		</div>
 	</div>
 	<!--test4-->
 	<div id="test4" class="col s12">

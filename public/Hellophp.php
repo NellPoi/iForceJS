@@ -50,15 +50,31 @@
     print("字符串 string\n");
     $string_1="HelloPHP";//双引号
     $string_2='hellophp';//单引号
-    //定界符 
+    //定界符
     $string_3=<<<EOD
 line1
       line2
 line3
 EOD;
     var_dump($string_1,$string_2,$string_3);
-
-
-
-    var_dump($string);
+    print("=========\n");
+    print("自动转换变量类型\n");
+    $foo="0";
+    $foo+=2;//整型与字符串相加运算为整型
+    var_dump($foo);
+    $foo+=0.2;//整数与浮点数相加运算为浮点型
+    var_dump($foo);
+    $foo=6+"3 boy";//如果是以合法数字开始，则取其数运算
+    var_dump($foo);
+    $foo=3+"7.Easy";//如果这个字符串带有. e E任何一个字符会被都当做float来求值
+    var_dump($foo);
+    print("==========\n");
+    print("强制转换变量类型\n");
+    $foo="I'am foo";
+    $foo=(bool)$foo;//字符串强制转换为布尔型，因为string有被赋值所以是true
+    var_dump($foo);
+    unset($foo);//把foo掏空
+    $foo=(boolean)$foo;//因为foo现在为空值，被强制转换为布尔值后为false
+    var_dump($foo);
+//    
 

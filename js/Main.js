@@ -63,7 +63,8 @@ function test1_Modal3Fbtn_EchoArray(){
 	Public_test1_EchoArray();
 }
 function test2_ForceRTL(){
-	alert("浪费时间.");
+    var $toast = $('<b class="red-text"><i>The method is not supported</i></b>');
+    Materialize.toast($toast, 5000);
 	/*
 	var cb_ForceRTL=document.getElementById('test2_cb_ForceRTL');
 	*/
@@ -95,7 +96,6 @@ function test1_Modal4_Fbtn_CloseModal(){
 function AlertMsg_1(){
 	alert("打开声音得到更好的体验."
 	+"\n建议穿上红色衣服."
-	+"\n卸载 QQ浏览器 提高网页性能."
 	);
 	window.open("https://tusenpo.github.io/FlappyFrog/");
 }

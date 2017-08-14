@@ -15,6 +15,10 @@
 	<script src="js/res/strings.js"></script>
 	<script src="js/res/ResUrlsManager.js"></script>
 	<script src="js/CodeCheck.js"></script>
+    <script src="js/ConsoleInPage/screenlog.js"></script>
+    <!--[if IE]>
+    <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
 	<!--Chrome-->
 	<meta name="theme-color" content="#0288d1">
 	<!--MOBILE顶栏-->
@@ -51,7 +55,7 @@
 		</div>
 		<!--Nav_test部分-->
 		<div class="light-blue darken-1" style="padding:1.2em;">
-			<h5><span id="Navtestname">NavTestName</span></h5>
+			<h5><span id="Navtestname"></span></h5>
 		</div>
 		<ul class="tabs light-blue darken-1">
 			<li class="tab hoverable"><a class="white-text" href="#test1">Active</a></li>
@@ -60,11 +64,13 @@
 			<li class="tab hoverable"><a class="white-text active" href="#test4">Lab</a></li>
 		</ul>
 	</nav>
+    <script src="js/ConsoleInPage/screenlog.js"></script>
 
 </head>
 
 <body id="body">
 <div class="container">
+    <!--Loading Tip-->
 	<div class="row right" id="Loading_DisplayRound">
 		<div class="preloader-wrapper small active">
 			<div class="spinner-layer spinner-red-only">
@@ -131,19 +137,14 @@
 	<div id="test3">
 		<div class="row">
 			<h4><span>Structure</span></h4>
-
-			<div class="card col s7 offset-l1">
-				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" id="Res_DemoBGImg">
-				</div>
-				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">卡片标题<i class="material-icons right">more_vert</i></span>
-					<p><a href="#">这是一个链接</a></p>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">卡片标题<i class="material-icons right">close</i></span>
-					<p>单击后显示的产品的详细信息。</p>
-				</div>
+			<div class="card-panel col s7 offset-l1">
+                <h5>CONSOLE SETTING</h5>
+                <br>
+                <div class="input-field">
+                    <input id="CONSOLE_name" type="text" class="validate">
+                    <label for="CONSOLE_name">CONSOLE</label>
+                </div>
+                <a class="btn waves-effect light-blue right" onclick="printconcole()">print</a><br/><br/>
 			</div>
 
 		</div>
@@ -304,10 +305,17 @@
 </script>
 <script>
 	/*CodeCheck DEMO*/
+    function printconcole() {
+        for(var i=1;i<=10*100;i++){
+            console.log(i);
+        }
+    }
     window.onload=function(){
-        try{api_CodeCheck_Load();}catch(e){alert("API_1_ERROR\n"+e);};
-        try{api_ResUrlsManager_Load();}catch(e){alert("API_2_ERROR\n"+e);};
-        try{api_string_Load();}catch(e){alert("API_3_ERROR\n"+e);};
+        screenLog.init();
+        screenLog.log('String: Hello world');
+        try{api_CodeCheck_Load();}catch(e){alert("API_1_ERRORUNKNOWNn"+e);};
+        try{api_ResUrlsManager_Load();}catch(e){alert("API_2_ERRORUNKNOWNn"+e);};
+        try{api_string_Load();}catch(e){alert("API_3_ERRORUNKNOWNn"+e);};
     };
 </script>
 <script src="js/init.js"></script>

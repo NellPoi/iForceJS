@@ -105,3 +105,6 @@ EOD;
     <input type="text" name="email"><br/>
     <input type="submit" name="submit" value="submit">
 </form>
+<?php
+echo $_SERVER['HTTP_USER_AGENT']
+?>

@@ -3,6 +3,7 @@
 	alert 调试大法好
 	bug使人进步
 */
+console.log("hello");
 function test1_DisplayDate(){
 	document.getElementById('nav_title').innerHTML=Date();
 }

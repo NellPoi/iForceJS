@@ -3,9 +3,9 @@
 	IDE:AIDE
 */
 var api_Res_Urls={
-	url_AboutmeHeadImg:"js/res/imgs/d7cdb62d663c33b5ceb11d45972c5271013dec0d.jpg_192x192.jpg",
+	url_AboutmeHeadImg:"imgs/HeadImg_192x192.jpg",
 	url_WebColorCode:"http://www.w3school.com.cn/cssref/css_colors.asp",
-	url_NavAboutmeHeadImg:"js/res/imgs/d7cdb62d663c33b5ceb11d45972c5271013dec0d.jpg_192x192.jpg",
+	url_NavAboutmeHeadImg:"imgs/HeadImg_192x192.jpg",
 	url_SideNavAudioContext:"http://kune.online/AudioContext",
 	url_NavDropdownQQGroup:"https://jq.qq.com/?_wv=1027&k=4AHMbAt",
 };

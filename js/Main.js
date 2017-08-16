@@ -146,3 +146,13 @@ function test1_Modal5_btn_NextSteps(){
 		FonterOtherMode();
 	}
 }
+function console_print(){
+    console.info("console_print()");
+    var txt=document.getElementById("CONSOLE_name").value;
+    console.log(txt);
+}
+function printconcole() {
+    for(var i=1;i<=10*100;i++){
+        console.log(i);
+    }
+}

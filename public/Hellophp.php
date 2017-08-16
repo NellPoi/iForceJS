@@ -108,3 +108,11 @@ EOD;
 <?php
 echo $_SERVER['HTTP_USER_AGENT']
 ?>
+    <?php
+    print("10==========\n");
+    $A_name1="abc";
+    $A_name2=$A_name1;
+    $A_name3=&$A_name1;
+    var_dump($A_name1,$A_name2,$A_name3);
+    $A_name1="def";
+    var_dump($A_name1,$A_name2,$A_name3);

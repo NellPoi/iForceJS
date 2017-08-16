@@ -8,3 +8,4 @@ var api_string_Load=function Strings(){
 	document.getElementById("test1_Modal5_TopMsgTitle").innerHTML="Background TopMsg";
 	document.getElementById("test1_Modal5_TopMsgContents").innerHTML="点击此消息可关闭."+p+"只能从下方选择一种修改方式进行修改."+p+"最不想写又是写得最久的一个破功能.";*/
 };
+console.log(_CT_()+"Process finished in res/strings.js with exit code ");

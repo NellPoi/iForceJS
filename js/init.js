@@ -20,4 +20,5 @@ $(document).ready(function(){
     }
   );
 });
+console.log(_CT_()+"Process finished in init.js with exit code ");
 

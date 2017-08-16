@@ -10,3 +10,4 @@ var api_CodeCheck_Load=function(){
 	 document.getElementById("ccid_BasicStatus").innerHTML="已被激活";
 	 }*/
 };
+console.log(_CT_()+"Process finished in CodeCheck.js with exit code ");

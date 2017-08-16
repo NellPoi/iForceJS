@@ -15,5 +15,6 @@ var api_ResUrlsManager_Load=function(){
 	document.getElementById("Res_SideNavAudioContext").href=api_Res_Urls.url_SideNavAudioContext;
 	document.getElementById("Res_DropdownQQGroup").href=api_Res_Urls.url_NavDropdownQQGroup;
 };
+console.log(_CT_()+"Process finished in res/ResUrlsManager.js with exit code ");
 
 

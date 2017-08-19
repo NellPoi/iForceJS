@@ -1,6 +1,6 @@
 #iForceJS
 
->[VIEW](http://kune.online)
+>[站点](http://www.kune.online)
 
 ----------
   **Git版本管理须知** 

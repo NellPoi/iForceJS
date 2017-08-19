@@ -159,7 +159,7 @@ function test1_Modal5_btn_NextSteps() {
 function console_print() {
     console.info("console_print()");
     var txt = document.getElementById("CONSOLE_name").value;
-    console.log(_CT_()+txt);
+    console.log(_CT_() + txt);
 }
 
 function printconcole() {
@@ -167,9 +167,9 @@ function printconcole() {
         console.log(i);
     }
 }
-
-setTimeout("changeFrameHeight();console.log(_CT_()+'SetiFrameheightSucceed')", 8000);
-setTimeout("document.getElementById('Navtestname').innerHTML=navigator.userAgent;console.log(_CT_()+'GetUASucceed')",2000);
+//countdown events
+setTimeout("changeFrameHeight();console.log(_CT_()+'SetiFrameheightSucceed')", 4000);
+setTimeout("document.getElementById('Navtestname').innerHTML=navigator.userAgent;console.log(_CT_()+'GetUASucceed')", 3000);
 function changeFrameHeight() {
     var ifm = document.getElementById("myiframe");
     ifm.height = document.documentElement.clientHeight;
@@ -179,15 +179,23 @@ function changeFrameHeight() {
 window.onresize = function () {
     changeFrameHeight();
 }
-function _CT_(){
-    console_GetTime();
-}
+
 function _CT_() {
+    //Console panel time component
     var nowTime = new Date();
     var consoleTime = "[" + nowTime.getHours() + ":" + nowTime.getMinutes() + "]";
     return consoleTime;
 }
-console.log(_CT_()+"Process finished in Main.js with exit code ");
+
+function ClearConsole() {
+    // screenLog,init();
+    // screenLog.clear;
+    console.clear();
+}
+
+
+console.log(_CT_() + "Process finished in Main.js with exit code ");
+
 
 
 

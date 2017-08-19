@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>Kun-Fit</title>
     <!--ICON-->
-    <link href="bitbug_favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="bitbug_favicon.ico" rel="icon" type="image/x-icon"/>
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS -->
@@ -27,8 +27,7 @@
     <nav class="nav-extended light-blue darken-2">
         <div class="nav-wrapper">
             <div class="z-depth-2">
-                <a href="#" class="white-text" id="nav_title"
-                   style="font-size:x-large;padding:0;margin:0;font-weight:500;">iForceJS</a>
+                <a href="#" class="white-text" id="nav_title" style="font-size:x-large;padding:0;margin:0;font-weight:500;">iForceJS</a>
                 <a href="#" data-activates="slide-out" class="button-collapse">
                     <i class="material-icons grey-text text-lighten-2">menu</i>
                 </a>
@@ -158,12 +157,14 @@
                     <input id="CONSOLE_name" type="text" class="validate">
                     <label for="CONSOLE_name">手动向输出浏览器输出console信息</label>
                 </div>
-                <a class="btn white grey-text light waves-effect right" onclick="console_print()"><b>print</b></a><br/><br/>
+                <a class="btn white grey-text light waves-effect right"
+                   onclick="console_print()"><b>print</b></a><br/><br/>
             </div>
-            <div class="card col m4 s12 offset-l1 blue-grey darken-2 white-text">
+            <div class="card col m4 s12 offset-m1 blue-grey darken-2 white-text">
                 <div class="card-content">
                     <i class="material-icons">shuffle</i>
                     <span class="card-title offset-s1">PrintlnCycle</span><br/>
+                    <a class="btn blue-grey" onclick="ClearConsole()">销毁console调试信息</a>
                     <P>默认for语句循环10立方输出console.log信息</P>
                 </div>
                 <div class="card-action">
@@ -172,13 +173,13 @@
             </div>
         </div>
     </div>
+    <!--test4-->
+    <div id="test4" class="col s12 container">
+        <h4 class="col s12"><span>iFrameLab</span></h4><br>
+        <iframe id="myiframe" src="public/Hellophp.php" class="hoverable" style="border:none;" width="100%"></iframe>
+    </div>
 </div>
-<!--test4-->
-<div id="test4" class="col s12 container">
-    <h4 class="col s12"><span>iFrameLab</span></h4><br>
-    <iframe id="myiframe" src="public/Hellophp.php" class="hoverable" style="border:none;" width="100%"></iframe>
-</div>
-</div>
+
 
 <!-- Dropdown1 Structure -->
 <ul id='dropdown1' class='dropdown-content'>
@@ -330,30 +331,12 @@
 </div>
 
 <!--框架核心组件，不可调换加载顺序-->
-<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyA4ZeFOhXK7la3_UvaXvyGW27j7LnYMlQ4",
-        authDomain: "kune-33ae0.firebaseapp.com",
-        databaseURL: "https://kune-33ae0.firebaseio.com",
-        projectId: "kune-33ae0",
-        storageBucket: "kune-33ae0.appspot.com",
-        messagingSenderId: "302939930437"
-    };
-    firebase.initializeApp(config);
-</script>
 <script>
     /*CodeCheck DEMO*/
-    function printconcole() {
-        for (var i = 1; i <= 10 * 100; i++) {
-            console.log(i);
-        }
-    }
-
     window.onload = function () {
         screenLog.init();
         screenLog.log('==>[log]Console panel');
+        screenLog.log(_CT_()+'如果有需要可以在test3中清除控制台信息');
         try {
             api_CodeCheck_Load();
         } catch (e) {

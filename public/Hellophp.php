@@ -203,10 +203,29 @@ EOD;
             .= 字符串运算符<br/>
         </div>
     <div class="bigOne">Increment / decrement operator</div>
+    <p class="_ShortLine_">——</p>
     <li>相比前者拥有更快的运行速度</li>
+    <span>前置运算</span>
+    <div class="code_grey">
+        $a=10<br/>
+        $b=++$a;<br/>
+        //a=?
+    </div>
     <?php
     $num_count_3=10;
     $num_count_4=++$num_count_3;
-    print($_RS_.($num_count_3+$num_count_4));
+    print($_RS_.($num_count_3));
+    ?>
+    <br/>
+    <span>后置运算</span>
+    <div class="code_grey">
+        $a=10;<br/>
+        $b=$a++;<br/>
+        //$a=?
+    </div>
+    <?php
+    $num_count_3=10;
+    $num_count_4=$num_count_3++;//b为未进行计算时的变量三（10）.
+    print($_RS_.$num_count_4);
     ?>
 </div>
